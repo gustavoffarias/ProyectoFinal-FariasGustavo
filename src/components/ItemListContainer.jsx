@@ -1,4 +1,4 @@
-import Cards from '../Cards/Cards.jsx'
+import Cards from './Cards.jsx'
 
 const ItemListContainer = ({greeting}) => {
     return (
