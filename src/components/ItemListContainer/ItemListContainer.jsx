@@ -11,10 +11,6 @@ const ItemListContainer = ({greeting}) => {
                 <Cards />
                 <Cards />
                 <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
             </div>
         </div>
     )
