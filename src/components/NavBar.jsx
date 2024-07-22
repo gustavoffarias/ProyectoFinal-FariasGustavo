@@ -1,10 +1,14 @@
 import CartWidget from "./CartWidget.jsx"
 
-const NavBar = () => {
+function NavBar() {
+    
     return (
         <nav>
             <h3>ecommerce</h3>
             <ul>
+                <li>
+                    <button>Todos</button>
+                </li>
                 <li>
                     <button>Lubricantes</button>
                 </li>

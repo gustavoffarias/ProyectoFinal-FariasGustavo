@@ -46,7 +46,8 @@ svg {
   height: 2em;
 }
 
-#cardsContainer {
+
+.itemList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

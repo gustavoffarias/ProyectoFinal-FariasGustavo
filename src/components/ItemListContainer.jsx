@@ -1,18 +1,21 @@
-import Cards from './Cards.jsx'
+import ItemList from './itemList.jsx';
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({usuario, products}) => {
+
+    const {nombre, apellido} = usuario;
+
     return (
-        <div>
-            <h1>{greeting}</h1>
+        <>
+            <h1>Bienvenidos {nombre} {apellido}</h1>
             <div id='cardsContainer'>
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
-                <Cards />
+            {
+                products.length === 0 ?
+                    <p>Cargando...</p>
+                    :
+                    <ItemList products={products} />
+            }
             </div>
-        </div>
+        </>
     )
 }
 
