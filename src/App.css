@@ -37,15 +37,21 @@ nav ul {
   list-style: none;
 }
 
-nav div {
+nav a {
   width: 25%;
+  display: flex;
+}
+
+.cartWidget {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 svg {
   width: 2em;
   height: 2em;
 }
-
 
 .ItemList {
   display: flex;
