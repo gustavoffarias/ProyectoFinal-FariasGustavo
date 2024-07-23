@@ -7,16 +7,13 @@ function NavBar() {
             <h3>ecommerce</h3>
             <ul>
                 <li>
-                    <button>Todos</button>
+                    <button>Home</button>
                 </li>
                 <li>
-                    <button>Lubricantes</button>
+                    <button>Productos</button>
                 </li>
                 <li>
-                    <button>Filtros</button>
-                </li>
-                <li>
-                    <button>Repuestos</button>
+                    <button>Contactos</button>
                 </li>
             </ul>
             <CartWidget />

@@ -1,10 +1,12 @@
 
+
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar.jsx';
 import ItemListContainer from './components/ItemListContainer.jsx';
 import fetchData from './components/fectchData.jsx';
-import { useEffect, useState } from 'react';
-import FIlterCategory from './components/FilterCategory.jsx';
+
 
 function App() {
   const user = {
@@ -13,8 +15,6 @@ function App() {
   };
 
   const [products, setProducts] = useState([]);
-
-  const [] = useState('todos');
 
   useEffect(() => {
 
@@ -30,7 +30,13 @@ function App() {
   return (
     <>
       <NavBar  />
-      <ItemListContainer usuario={user} products={products} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/NavegaLasRutas-FariasGustavo/lista" element={<ItemListContainer usuario={user} products={products} />} />
+        </Routes>      
+      </BrowserRouter>
+      
+      
     </>
   );
 };

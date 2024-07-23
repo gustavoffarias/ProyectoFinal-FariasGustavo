@@ -1,13 +1,13 @@
 import React from "react";
-import Item from "./item";
+import Item from "./Item";
 
 const ItemList = ({products}) => {
     return (
-        <div className="itemList">
+        <div className="ItemList">
         {
             products.map ((el, index) => {
                 return(
-                    <Item index={index} nombre={el.nombre} precio={el.precio} img={el.img} />
+                    <Item index={index} nombre={el.nombre} precio={el.precio} img={el.img} categoria={el.categoria} />
                 )
             })
         }
