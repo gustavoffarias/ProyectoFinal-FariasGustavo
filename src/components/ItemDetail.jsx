@@ -1,17 +1,30 @@
-import React from "react";
-import Item from "./Item";
+import React, { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({products}) => {
+
+    const { id } = useParams(); 
+
+    const [productSelected, setproductSelected] = useState({});
+
+    useEffect(() => {
+        const prodSelected = products.find(el => el.id === parseInt(id));
+        setproductSelected(prodSelected);
+
+    },[]);
+
     return (
-        <div className="ItemList">
-        {
-            products.map ((el) => {
-                return(
-                    <Item key={el.id} id={el.id} nombre={el.nombre} precio={el.precio} img={el.img} categoria={el.categoria} />
-                )
-            })
-        }
-        </div>
+        <>
+            <div className='prodDetail'>
+                <p>Hola {productSelected.nombre}</p>
+                <p>{productSelected.categoria}</p>
+                <p>${productSelected.precio}</p>
+                <Link to={`/NavegaLasRutas-FariasGustavo/detalle/${productSelected.id}`}>
+                    <button>Comprar</button>
+                </Link>
+            </div>
+        </>
     );
 };
 
