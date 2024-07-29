@@ -1,19 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
+import { Link } from "react-router-dom"
+import Item from "./Item";
 
-function FIlterCategory({ filterCategoryState, setfilterCategoryState }) {
+function FIlterCategory({ products }) {
 
-    function handleFilterCategory(e) {
-        e.preventDefault();
-        setfilterCategoryState(e.target.value);
-    };
+    const { categoria } = useParams(); 
+
+    const [productSelected, setProductSelected] = useState([]);   
+
+    useEffect(() => {
+        const prodSelected = products.filter(el => el.categoria === categoria);
+        setProductSelected(prodSelected);
+
+    },[]);
 
     return (
-        <select onChange={handleFilterCategory} id="filter" value={filterCategoryState} >
-            <option value="todos">Todos</option>
-            <option value="aceites">Aceites</option>
-            <option value="filtros">Filtros</option>
-        </select>
-    );
+        <>  
+            <div id='cardsContainer'>
+                <h2>{categoria}</h2>
+                <div className="ItemList">
 
+                    {
+                        productSelected.length === 0 
+                        ?
+                        <p>Cargando...</p>
+                        :
+                        productSelected.map(el => {
+                            return(
+                                <div className='cards' key={el.id}>
+                                    <img src={`.${el.img}`} alt=""/>
+                                    <h2>{el.nombre}</h2>
+                                    <p>{el.categoria}</p>
+                                    <p>${el.precio}</p>
+                                    <Link to={`/NavegaLasRutas-FariasGustavo/detalle/${el.id}`}>
+                                        <button>Ver Producto</button>
+                                    </Link>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            </div>
+        </>
+    );
 };
+
 export default FIlterCategory;

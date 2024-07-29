@@ -16,8 +16,8 @@ const ItemDetail = ({products}) => {
 
     return (
         <>
-            <div className='prodDetail'>
-                <p>Hola {productSelected.nombre}</p>
+            <div className='prodDetai'>
+                <p>{productSelected.nombre}</p>
                 <p>{productSelected.categoria}</p>
                 <p>${productSelected.precio}</p>
                 <Link to={`/NavegaLasRutas-FariasGustavo/detalle/${productSelected.id}`}>

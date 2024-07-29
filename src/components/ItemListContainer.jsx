@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ItemList from './ItemList.jsx';
-import FIlterCategory from './FilterCategory.jsx';
-
+import FilterCategoryButton from './FilterCategoryButton.jsx';
 
 const ItemListContainer = ({usuario, products}) => {
 
     const {nombre, apellido} = usuario;
 
-    const [filterCategoryState, setfilterCategoryState] = useState('todos');
-
     return (
         <>
-            <h1>Bienvenidos {nombre} {apellido}</h1>
+            <h1>Bienvenido {nombre} {apellido}</h1>
 
-            <FIlterCategory filterCategoryState={filterCategoryState} setfilterCategoryState={setfilterCategoryState} />
+            <FilterCategoryButton />
 
             <div id='cardsContainer'>
             {
