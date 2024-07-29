@@ -3,15 +3,18 @@ import { Link } from "react-router-dom"
 
 const FilterCategoryButton = ({categoria}) => {
     return (
-        <div className='btn-primary' key={categoria}>
+        <div className="filterButton" key={categoria}>
             <Link to={`/NavegaLasRutas-FariasGustavo/categoria/Todos`}>
-                <button>Todos</button>
+                <button className="socialbutton sb-fi">Todos</button>
             </Link>
             <Link to={`/NavegaLasRutas-FariasGustavo/categoria/Aceites`}>
-                <button>Aceites</button>
+                <button className="socialbutton sb-fi">Aceites</button>
             </Link>
             <Link to={`/NavegaLasRutas-FariasGustavo/categoria/Filtros`}>
-                <button>Filtros</button>
+                <button className="socialbutton sb-fi">Filtros</button>
+            </Link>
+            <Link to={`/NavegaLasRutas-FariasGustavo/categoria/Cubiertas`}>
+                <button className="socialbutton sb-fi">Cubiertas</button>
             </Link>
         </div>
     );

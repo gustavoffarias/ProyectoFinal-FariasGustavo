@@ -19,6 +19,7 @@ div {
 
 nav {
   width: 90%;
+  padding: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,7 +27,6 @@ nav {
 
 nav h3  {
   width: 25%;
-
 }
 
 nav ul {
@@ -35,6 +35,40 @@ nav ul {
   justify-content: space-evenly;
   align-items: center;
   list-style: none;
+}
+
+nav ul li a {
+  width: 100%;
+}
+
+nav .socialbutton {
+  background-color: black;
+  padding: 10px 5px 30px 5px;
+  margin: 1px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: white;
+  width: 150px;
+  height: 32px;
+  border-radius: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+nav .sb-na.socialbutton:hover {
+  background-color: lightgray;
+  padding: 10px 5px 30px 5px;
+  margin: 1px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  color: black;
+  width: 150px;
+  height: 32px;
+  border-radius: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 nav a {
@@ -48,9 +82,55 @@ nav a {
   align-items: center;
 }
 
+h1 {
+  background-color: lightgray;
+  width:  100%;
+  color: black;
+  padding: 1%;
+}
+
+.filterButton {
+  padding: 1%;
+
+}
+
+.filterButton .socialbutton {
+  padding: 10px 5px 30px 5px;
+  margin: 1px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: black;
+  width: 175px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: lightgray;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.filterButton .sb-fi.socialbutton:hover {
+  background-color: rgba(9, 103, 197, 0.9);
+  padding: 10px 5px 30px 5px;
+  margin: 1px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  color: white;
+  width: 175px;
+  height: 32px;
+  border-radius: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 svg {
   width: 2em;
   height: 2em;
+}
+
+#cardsContainer {
+  padding-bottom: 1%;
 }
 
 .ItemList {
@@ -62,6 +142,7 @@ svg {
 .cards {
   width: 25%;
   margin: 1%;
+  padding: 0.5%;
   border: 0.2em solid grey;
   border-radius: 1em;
 }
@@ -72,11 +153,90 @@ svg {
   border-top-right-radius: 1em;
 }
 
+.cards h2, p, a {
+  padding: 1%;
+}
+
+.cards .socialbutton {
+  padding: 10px 5px 30px 5px;
+  margin: 1px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: white;
+  width: 175px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #112D4E;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.cards .sb-ca.socialbutton:hover {
+  background-color: #3F72AF;
+  padding: 10px 5px 30px 5px;
+  margin: 1px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  color: white;
+  width: 175px;
+  height: 32px;
+  border-radius: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .prodDetail {
+  display: flex;
   width: 50%;
-  margin: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
   border: 0.2em solid grey;
   border-radius: 1em;
+}
+
+.prodDetail img {
+  width: 50%;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+
+.divProdDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divProdDetail .socialbutton {
+  padding: 10px 5px 30px 5px;
+  margin: 1px;
+  text-align: center;
+  outline: none;
+  text-decoration: none !important;
+  color: white;
+  width: 175px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #112D4E;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.divProdDetail .sb-ca.socialbutton:hover {
+  background-color: #3F72AF;
+  padding: 10px 5px 30px 5px;
+  margin: 1px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  color: white;
+  width: 175px;
+  height: 32px;
+  border-radius: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 footer {

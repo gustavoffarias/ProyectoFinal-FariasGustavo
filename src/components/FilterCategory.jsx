@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import { Link } from "react-router-dom"
-import Item from "./Item";
+import { Link } from "react-router-dom";
+import FilterCategoryButton from "./FilterCategoryButton.jsx"
 
 function FIlterCategory({ products }) {
 
@@ -18,7 +18,7 @@ function FIlterCategory({ products }) {
     return (
         <>  
             <div id='cardsContainer'>
-                <h2>{categoria}</h2>
+                <h1>{categoria}</h1>
                 <div className="ItemList">
 
                     {
@@ -34,7 +34,7 @@ function FIlterCategory({ products }) {
                                     <p>{el.categoria}</p>
                                     <p>${el.precio}</p>
                                     <Link to={`/NavegaLasRutas-FariasGustavo/detalle/${el.id}`}>
-                                        <button>Ver Producto</button>
+                                        <button className="socialbutton sb-ca">Ver Producto</button>
                                     </Link>
                                 </div>
                             )

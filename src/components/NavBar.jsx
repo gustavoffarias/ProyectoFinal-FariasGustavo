@@ -11,17 +11,17 @@ function NavBar() {
             <ul>
                 <li>
                     <Link to="/NavegaLasRutas-FariasGustavo/home">
-                        <button>Home</button>
+                        <button className="socialbutton sb-na">Home</button>
                     </Link>
                 </li>
                 <li>
                     <Link to="/NavegaLasRutas-FariasGustavo/products">
-                        <button>Productos</button>
+                        <button className="socialbutton sb-na">Productos</button>
                     </Link>
                 </li>
                 <li>
                     <Link to="/NavegaLasRutas-FariasGustavo/contact">
-                        <button>Contactos</button>
+                        <button className="socialbutton sb-na">Contactos</button>
                     </Link>
                 </li>
             </ul>

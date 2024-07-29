@@ -15,14 +15,18 @@ const ItemDetail = ({products}) => {
     },[]);
 
     return (
-        <>
-            <div className='prodDetai'>
-                <p>{productSelected.nombre}</p>
-                <p>{productSelected.categoria}</p>
-                <p>${productSelected.precio}</p>
-                <Link to={`/NavegaLasRutas-FariasGustavo/detalle/${productSelected.id}`}>
-                    <button>Comprar</button>
-                </Link>
+        <>  
+            <h1>Detalle del producto</h1>
+            <div className='prodDetail'>
+                <img src={`.${productSelected.img}`} alt=""/>
+                <div className="divProdDetail">
+                    <p>{productSelected.nombre}</p>
+                    <p>{productSelected.categoria}</p>
+                    <p>${productSelected.precio}</p>
+                    <Link to={`/NavegaLasRutas-FariasGustavo/detalle/${productSelected.id}`}>
+                        <button className="socialbutton sb-ca">Comprar</button>
+                    </Link>
+                </div>
             </div>
         </>
     );

@@ -9,7 +9,7 @@ const Item = ({nombre, precio, img, id, categoria}) => {
             <p>{categoria}</p>
             <p>${precio}</p>
             <Link to={`/NavegaLasRutas-FariasGustavo/detalle/${id}`}>
-                <button>Ver Producto</button>
+                <button className="socialbutton sb-ca">Ver Producto</button>
             </Link>
         </div>
     );
