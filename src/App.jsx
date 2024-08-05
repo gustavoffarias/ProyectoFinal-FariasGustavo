@@ -12,6 +12,7 @@ import ItemDetail from './components/ItemDetail.jsx';
 import NotFoundRoute from './components/NotFoundRoute.jsx';
 import NotFoundProds from './components/NotFoundProds.jsx';
 import FIlterCategory from './components/FilterCategory.jsx';
+import { CartProvider } from './components/CartContext.jsx';
 
 function App() {
   const user = {
@@ -35,17 +36,19 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <NavBar  />
-        <Routes>
-          <Route path="/NavegaLasRutas-FariasGustavo/*" element={<NotFoundRoute />} />
-          <Route path="/NavegaLasRutas-FariasGustavo/detalle/*" element={<NotFoundProds />} />
-          <Route path="/NavegaLasRutas-FariasGustavo/" element={<ItemListContainer usuario={user} products={products} />} /> 
-          <Route path="/NavegaLasRutas-FariasGustavo/home/" element={<Home />} />
-          <Route path="/NavegaLasRutas-FariasGustavo/products" element={<ItemListContainer usuario={user} products={products} />} />         
-          <Route path="/NavegaLasRutas-FariasGustavo/detalle/:id" element={<ItemDetail products={products} />} />
-          <Route path="/NavegaLasRutas-FariasGustavo/categoria/Todos" element={<ItemListContainer usuario={user} products={products} />} />
-          <Route path="/NavegaLasRutas-FariasGustavo/categoria/:categoria" element={<FIlterCategory products={products} />} />
-        </Routes>  
+        <CartProvider>
+          <NavBar  />
+          <Routes>
+            <Route path="/NavegaLasRutas-FariasGustavo/*" element={<NotFoundRoute />} />
+            <Route path="/NavegaLasRutas-FariasGustavo/detalle/*" element={<NotFoundProds />} />
+            <Route path="/NavegaLasRutas-FariasGustavo/" element={<ItemListContainer usuario={user} products={products} />} /> 
+            <Route path="/NavegaLasRutas-FariasGustavo/home/" element={<Home />} />
+            <Route path="/NavegaLasRutas-FariasGustavo/products" element={<ItemListContainer usuario={user} products={products} />} />         
+            <Route path="/NavegaLasRutas-FariasGustavo/detalle/:id" element={<ItemDetail products={products} />} />
+            <Route path="/NavegaLasRutas-FariasGustavo/categoria/Todos" element={<ItemListContainer usuario={user} products={products} />} />
+            <Route path="/NavegaLasRutas-FariasGustavo/categoria/:categoria" element={<FIlterCategory products={products} />} />
+          </Routes>
+        </CartProvider>  
         <Footer />    
       </BrowserRouter>
       
