@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import ItemList from './ItemList.jsx';
 import FilterCategoryButton from './FilterCategoryButton.jsx';
+import Loader from './Loader.jsx';
+import { useAppContext } from './Context.jsx';
 
-const ItemListContainer = ({usuario, products}) => {
+const ItemListContainer = (usuario) => {
 
     const {nombre, apellido} = usuario;
+
+    const {upData, cart, products} = useAppContext();
+
+    useEffect(() => {
+        upData();
+    })
 
     return (
         <>
@@ -15,7 +23,7 @@ const ItemListContainer = ({usuario, products}) => {
             <div id='cardsContainer'>
             {
                 products.length === 0 ?
-                    <p>Cargando...</p>
+                    <Loader />
                     :
                     <ItemList products={products} />
             }

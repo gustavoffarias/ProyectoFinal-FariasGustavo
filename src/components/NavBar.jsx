@@ -5,27 +5,27 @@ function NavBar() {
     
     return (
         <nav>
-            <Link to="/NavegaLasRutas-FariasGustavo/">
+            <Link to="/ProyectoFinal-FariasGustavo/">
                 <h3>CarMarket</h3>
             </Link>
             <ul>
                 <li>
-                    <Link to="/NavegaLasRutas-FariasGustavo/home">
+                    <Link to="/ProyectoFinal-FariasGustavo/home">
                         <button className="socialbutton sb-na">Home</button>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/NavegaLasRutas-FariasGustavo/products">
+                    <Link to="/ProyectoFinal-FariasGustavo/products">
                         <button className="socialbutton sb-na">Productos</button>
                     </Link>
                 </li>
                 <li>
-                    <Link to="/NavegaLasRutas-FariasGustavo/contact">
+                    <Link to="/ProyectoFinal-FariasGustavo/contact">
                         <button className="socialbutton sb-na">Contactos</button>
                     </Link>
                 </li>
             </ul>
-            <Link to="/NavegaLasRutas-FariasGustavo/cart">
+            <Link to="/ProyectoFinal-FariasGustavo/cart">
                 <CartWidget />
             </Link>
         </nav>

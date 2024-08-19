@@ -1,7 +1,11 @@
 import React from "react";
 import Item from "./Item";
+import { useAppContext } from "./Context";
 
-const ItemList = ({products}) => {
+const ItemList = () => {
+
+    const { products } = useAppContext();
+
     return (
         <div className="ItemList">
         {

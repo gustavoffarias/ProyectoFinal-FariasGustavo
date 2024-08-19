@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import { Link } from "react-router-dom";
-import ItemCount from "./ItemCount";
-import { CartContext } from "./CartContext";
+import { useAppContext } from "./Context";
 
-const ItemDetail = ({products}) => {
+const ItemDetail = () => {
+
+    const { products , addCart} = useAppContext();
 
     const { id } = useParams(); 
 
@@ -28,16 +28,6 @@ const ItemDetail = ({products}) => {
 
     const [quantityAdded, setQuantityAdded] = useState(0);
 
-    const { addItem } =  useContext(CartContext);
-
-    const handleOnAdd = (quantity) => {
-        setQuantityAdded(quantity);
-
-        const item = {id, nombre, precio};
-
-        addItem(item, quantity);
-    }
-
     return (
         <>  
             <h1>Detalle del producto</h1>
@@ -54,7 +44,9 @@ const ItemDetail = ({products}) => {
                             <button onClick={increment}>+</button>
                         </div>
                         <div>
-                            <button className="socialbutton sb-ca" onClick={() => handleOnAdd(quantity)} disabled={!productSelected.stock}>Agregar al carrito</button>
+                            <button className="socialbutton sb-ca" onClick={() => addCart(id)} disabled={!productSelected.stock}>
+                                Agregar al carrito
+                            </button>
                         </div>
                     </div>
                 </div>
