@@ -5,7 +5,7 @@ import { useAppContext } from "./Context";
 
 function FIlterCategory() {
 
-    const {products} = useAppContext();
+    const {products, addCart} = useAppContext();
 
     const { categoria } = useParams(); 
 
@@ -35,6 +35,7 @@ function FIlterCategory() {
                                     <h2>{el.nombre}</h2>
                                     <p>{el.categoria}</p>
                                     <p>${el.precio}</p>
+                                    <button className="socialbutton sb-ca" onClick={() => addCart(el.id)} >Agregar al carrito</button>
                                     <Link to={`/ProyectoFinal-FariasGustavo/detalle/${el.id}`}>
                                         <button className="socialbutton sb-ca">Ver Producto</button>
                                     </Link>

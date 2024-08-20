@@ -254,6 +254,29 @@ svg {
   align-items: center;
 }
 
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.itemCart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 65%;
+  margin: 1%;
+  padding: 0.5%;
+  border: 0.2em solid grey;
+  border-radius: 1em;
+}
+
+.itemCart img {
+  width: 15%;
+  /*border-top-left-radius: 1em;
+  border-top-right-radius: 1em;*/
+}
+
 footer {
   width: 100%;
   background-color: black;

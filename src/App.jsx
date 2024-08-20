@@ -9,6 +9,7 @@ import ItemDetail from './components/ItemDetail.jsx';
 import NotFoundRoute from './components/NotFoundRoute.jsx';
 import NotFoundProds from './components/NotFoundProds.jsx';
 import FIlterCategory from './components/FilterCategory.jsx';
+import Cart from './components/Cart.jsx'
 import { ContextProvider } from './components/Context.jsx';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             <Route path="/ProyectoFinal-FariasGustavo/detalle/*" element={<NotFoundProds />} />
             <Route path="/ProyectoFinal-FariasGustavo/" element={<Home />} /> 
             <Route path="/ProyectoFinal-FariasGustavo/home/" element={<Home />} />
+            <Route path="/ProyectoFinal-FariasGustavo/carrito" element={<Cart />} />
             <Route path="/ProyectoFinal-FariasGustavo/products" element={<ItemListContainer usuario={user} />} />         
             <Route path="/ProyectoFinal-FariasGustavo/detalle/:id" element={<ItemDetail />} />
             <Route path="/ProyectoFinal-FariasGustavo/categoria/Todos" element={<ItemListContainer usuario={user} />} />

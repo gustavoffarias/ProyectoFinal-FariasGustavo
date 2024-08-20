@@ -25,7 +25,7 @@ const ItemListContainer = (usuario) => {
                 products.length === 0 ?
                     <Loader />
                     :
-                    <ItemList products={products} />
+                    <ItemList />
             }
             </div>
         </>

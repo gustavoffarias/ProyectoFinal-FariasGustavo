@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import { useAppContext } from "./Context";
 
@@ -11,9 +11,8 @@ const ItemDetail = () => {
     const [productSelected, setproductSelected] = useState({});
 
     useEffect(() => {
-        const prodSelected = products.find(el => el.id === parseInt(id));
+        const prodSelected = products.find(el => el.id === id);
         setproductSelected(prodSelected);
-
     },[]);
 
     const [quantity, setQuantity] = useState(1);
