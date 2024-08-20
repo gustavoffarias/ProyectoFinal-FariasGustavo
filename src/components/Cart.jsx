@@ -28,7 +28,7 @@ const Cart = () => {
                 })
             }            
             </div>
-            <button className="socialbutton sb-ca"  onClick={() => handleCart()}>
+            <button className="cartSocialbutton sb-ca"  onClick={() => handleCart()}>
                 Comprar
             </button>
         </>
